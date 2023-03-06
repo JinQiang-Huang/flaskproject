@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <title>登录</title>
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(/static/images/bg-01.jpg);">
+                </div>
+
+                <form class="login100-form validate-form" method="post" action="/login">
+                    <div>
+                        {% if error %}
+                        <blockquote class="layui-elem-quote layui-text">
+                            {{ error }}<i class="layui-icon layui-icon-face-cry"
+                                style="font-size: 20px; color: #c50b0b;"></i>
+                        </blockquote>
+                        {% endif %}
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="用户名必填">
+                        <span class="label-input100">用户名</span>
+                        <input class="input100" type="text" name="username" autocomplete="off" placeholder="请输入用户名"
+                            required>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="密码必填">
+                        <span class="label-input100">密码</span>
+                        <input class="input100" type="password" name="password" autocomplete="off" placeholder="请输入密码"
+                            required>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button type="submit" class="layui-btn" lay-filter="demo1">登录</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/css/layui.js"></script>
+</body>
+
+</html>

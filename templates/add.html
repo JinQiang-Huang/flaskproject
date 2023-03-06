@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/layui.css">
+    <title>新增用户</title>
+</head>
+
+<body>
+    <div style="width: 500px; height: 400px; margin: 100px auto;">
+        <form class="layui-form" action="/add_save" method="post">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="username" required autocomplete="off" placeholder="请输入用户名"
+                        class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">年龄</label>
+                <div class="layui-input-block">
+                    <input type="text" name="age" required autocomplete="off" placeholder="请输入年龄" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">出生年月</label>
+                <div class="layui-input-block">
+                    <input type="text" name="birth_date" required autocomplete="off" placeholder="请输入出生年月"
+                        class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">加入时间</label>
+                <div class="layui-input-block">
+                    <input type="text" name="join_date" required autocomplete="off" placeholder="请输入加入时间"
+                        class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">登录密码</label>
+                <div class="layui-input-block">
+                    <input type="password" name="password" required autocomplete="off" placeholder="请输入登录密码"
+                        class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="submit" class="layui-btn" lay-filter="demo1">提交</button>
+                    <a href="javascript:history.back()" class="layui-btn layui-btn-primary">返回</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="/static/css/layui.js"></script>
+</body>
+
+</html>

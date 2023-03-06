@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/layui.css">
+    <title>网络系统管理项目花名册</title>
+</head>
+
+<body>
+    <div style="width: 800px; height: 400px; margin: 50px auto">
+        <i class="layui-icon-fonts-i" style="font-size: 30px; color: #a4a8ac;">网络系统管理项目花名册</i>
+        <table class="layui-table">
+            <colgroup>
+                <col width="150">
+                <col width="200">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>出生年月</th>
+                    <th>加入时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#jinja2 可以写python代码#}
+                {% for user in salary_list %}
+                <tr>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.age }}</td>
+                    <td>{{ user.birth_date }}</td>
+                    <td>{{ user.join_date }}</td>
+                    <td>
+                        <a href="/change/{{ user.name }}" class="layui-btn layui-btn-sm">修改</a>
+                        <a href="/delete/{{ user.name }}" class="layui-btn layui-btn-danger layui-btn-sm ">删除</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/add_user" class="layui-btn layui-btn-primary layui-border-green">新增用户</a>
+        <button type="button" class="layui-btn layui-btn-primary layui-border-green" onclick="backhome()">返回主页</button>
+        <script>
+            function backhome() {
+                window.location.href = "/";
+            }
+        </script>
+    </div>
+    <script src="/static/css/layui.js"></script>
+</body>
+
+</html>
