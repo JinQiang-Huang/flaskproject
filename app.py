@@ -3,7 +3,7 @@ from data import salary_list
 
 # 保存数据函数
 def save_fun():
-    with open('/DevOps/flaskproject/data.py', 'w') as f:
+    with open('data.py', 'w') as f:
         f.write('salary_list=' + str(salary_list))
 
 # 创建Flask对象

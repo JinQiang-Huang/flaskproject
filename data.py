@@ -1,1 +1,1 @@
-salary_list=[{'name': 'jinqiang', 'age': '22', 'birth_date': '1999-08', 'join_date': '2018-11', 'password': 'Skills39'}, {'name': 'motian', 'age': '22', 'birth_date': '2020-01', 'join_date': '2020-01', 'password': 'Skills39'}, {'name': 'admin', 'age': '---', 'birth_date': '---', 'join_date': '---', 'password': 'Skills39'}]
+salary_list=[{'name': 'jinqiang', 'age': '23', 'birth_date': '1999-08', 'join_date': '2018-11', 'password': 'jinqiang'}, {'name': 'admin', 'age': '---', 'birth_date': '---', 'join_date': '---', 'password': 'admin'}]
